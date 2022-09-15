@@ -56,7 +56,7 @@ function createProduct(event) {
   const productPriceInput = createRow.querySelector('input[type="number"]');
 
   const nameValue = productNameInput.value;
-  const priceValue = productPriceInput.value;
+  const priceValue = productPriceInput.valueAsNumber;
 
   const tableRow = document.createElement('tr');
   tableRow.classList.add('product');
@@ -83,7 +83,7 @@ function createProduct(event) {
   parent.appendChild(tableRow);
 
   productNameInput.value = '';
-  productPriceInput.value = 0;
+  productPriceInput.valueAsNumber = 0;
 }
 
 window.addEventListener('load', () => {
